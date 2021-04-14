@@ -28,6 +28,7 @@ chmod +x ./fntpc.py
 ./fntpc.py 127.0.0.1:123
 ```
 
+
 Here ```127.0.0.1:123``` its the ip & port of the Server from above
 (In this example we are running server & client on same Machine)
 
