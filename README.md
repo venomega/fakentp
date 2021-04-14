@@ -18,7 +18,7 @@ chmod +x ./fntpd.py
 ./fntpd.py 123
 ```
 
-Here *123* means a port to listen on *0.0.0.0*
+Here ```123``` means a port to listen on ```0.0.0.0```
 
 
 ##### Using the Client
