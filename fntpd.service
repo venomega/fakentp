@@ -1,0 +1,14 @@
+[Unit]
+Description=FakeNTP Server Daemon
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fntpd.py 123
+ExecReload=/usr/bin/iptables-restore /etc/iptables/iptables.rules
+ExecStop=/usr/lib/systemd/scripts/iptables-flush
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
