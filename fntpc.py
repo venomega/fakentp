@@ -26,10 +26,10 @@ def connect():
             break
         count += 1
 
-        cmd =   f"timedatectl set-time \"{asd[3]}-{count}-{asd[1]} {asd[4]}\""
-        os.popen("timedatectl set-ntp 0").read()
-        os.popen("timedatectl set-local-rtc 0").read()
-        os.popen(cmd).read()
+    cmd =   f"timedatectl set-time \"{asd[3]}-{count}-{asd[1]} {asd[4]}\""
+    os.popen("timedatectl set-ntp 0").read()
+    os.popen("timedatectl set-local-rtc 0").read()
+    os.popen(cmd).read()
 
 
 if __name__ == "__main__":
