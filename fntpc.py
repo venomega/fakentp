@@ -17,7 +17,6 @@ def connect():
     socket.connect((HOST, int(PORT)))
     socket.send(command)
     response = socket.recv(3333)
-    response = b'vie 14 may 2021 14:31:54 CDT\n'
     asd = response.decode().split(" ")
     count = 0
     for i in m:
@@ -30,6 +29,7 @@ def connect():
     os.popen("timedatectl set-ntp 0").read()
     os.popen("timedatectl set-local-rtc 0").read()
     os.popen(cmd).read()
+    
 
 
 if __name__ == "__main__":
