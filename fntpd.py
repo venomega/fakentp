@@ -13,7 +13,8 @@ def listen():
         client, addr = socket.accept()
         response = client.recv(3333)
         if response == b'GET_TIME':
-            client.send(os.popen("date").read().encode())
+            client.send(os.popen("timedatectl | sed -n 1p").read().encode())
+            
 
 
 if __name__ == "__main__":
@@ -23,4 +24,3 @@ if __name__ == "__main__":
         exit(0)
     else:
         listen()
-
